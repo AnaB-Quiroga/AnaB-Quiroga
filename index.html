@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ana Belén Quiroga · Portfolio QA</title>
+<style>
+:root{
+  --bg:#fbf6fa;--surface:#ffffff;--ink:#2b2233;--muted:#6b5f73;--line:#e6d9e6;
+  --accent:#6e3a73;--tint:#f1e1f1;--fail:#b3261e;--failbg:#fbe4e2;--ok:#256b3e;--okbg:#e0f2e6;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17121b;--surface:#211a27;--ink:#efe8f2;--muted:#b3a6bb;--line:#3a2f43;
+  --accent:#e0b0e0;--tint:#2e2236;--fail:#ff9d94;--failbg:#3d1f1d;--ok:#8fdba9;--okbg:#1b3324;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17121b;--surface:#211a27;--ink:#efe8f2;--muted:#b3a6bb;--line:#3a2f43;
+  --accent:#e0b0e0;--tint:#2e2236;--fail:#ff9d94;--failbg:#3d1f1d;--ok:#8fdba9;--okbg:#1b3324;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:46rem;margin:0 auto;padding:3rem 1.25rem 4rem}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;line-height:1.2;margin:0}
+h1{font-size:clamp(2.2rem,7vw,3.2rem);letter-spacing:-.01em}
+h2{font-size:1.6rem;margin:3.5rem 0 1rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+h3{font-size:1.15rem;margin:0 0 .5rem}
+p{margin:.6rem 0;max-width:62ch}
+.role{color:var(--accent);font-size:1.15rem;margin:.6rem 0 1.2rem;font-weight:600}
+.lead{font-size:1.1rem;color:var(--muted)}
+.report{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--fail);border-radius:6px;padding:1rem 1.2rem;margin:2rem 0 0;font-size:.95rem}
+.report b{font-family:Georgia,serif;font-size:1.05rem}
+.report dl{display:grid;grid-template-columns:auto 1fr;gap:.25rem 1rem;margin:.7rem 0 0}
+.report dt{color:var(--muted)}
+.report dd{margin:0}
+.tag{display:inline-block;padding:.05rem .55rem;border-radius:99px;font-size:.85rem;font-weight:600}
+.fail{background:var(--failbg);color:var(--fail)}
+.ok{background:var(--okbg);color:var(--ok)}
+.note{font-size:.85rem;color:var(--muted);margin-top:.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:.8rem 0;list-style:none}
+.chips li{background:var(--tint);color:var(--accent);padding:.25rem .8rem;border-radius:99px;font-size:.92rem}
+.scroll{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem;background:var(--surface)}
+th,td{text-align:left;padding:.6rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--tint);font-weight:600}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;margin:1rem 0}
+.meta div{border-left:3px solid var(--accent);padding-left:.8rem}
+.meta span{display:block;color:var(--muted);font-size:.88rem}
+ul.plain{padding-left:1.2rem;max-width:62ch}
+ul.plain li{margin:.35rem 0}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+footer{margin-top:4rem;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Ana Belén Quiroga</h1>
+  <p class="role">QA Tester Jr. · Testing manual</p>
+  <p class="lead">Estoy dando mis primeros pasos en testing de software. Me interesa que lo que se construye funcione bien para quien lo usa, y cuando algo falla, dejarlo documentado de forma clara para que se pueda corregir.</p>
+  <aside class="report" aria-label="Ejemplo de reporte de defecto">
+    <b>Defecto #09 · Validación al ingresar un número de teléfono ya registrado</b>
+    <dl>
+      <dt>Esperado</dt><dd>Mostrar un aviso y no permitir continuar</dd>
+      <dt>Obtenido</dt><dd>El sistema avanza al siguiente paso</dd>
+      <dt>Resultado</dt><dd><span class="tag fail">Falló</span></dd>
+    </dl>
+    <p class="note">Un reporte de mi trabajo integrador. Más abajo está el proyecto completo.</p>
+  </aside>
+</header>
+
+<h2 id="sobre-mi">Sobre mí</h2>
+<p>Estoy terminando la Tecnicatura en Análisis de Sistemas: me faltan tres materias y espero recibirme en diciembre de 2026. En paralelo me formo en testing QA y busco mi primera experiencia laboral en el rol, para aplicar lo que aprendí y seguir creciendo.</p>
+<p>Trabajé con pruebas manuales (funcionales y exploratorias), diseño de casos de prueba con técnicas de caja negra y reporte de defectos. En Talento Tech estoy aprendiendo Jira.</p>
+
+<h2 id="skills">Habilidades</h2>
+<ul class="chips">
+  <li>Pruebas funcionales</li>
+  <li>Pruebas exploratorias</li>
+  <li>Diseño de casos de prueba</li>
+  <li>Reporte de defectos</li>
+  <li>Plan de pruebas</li>
+  <li>Refinamiento de requerimientos</li>
+  <li>Historias de usuario y criterios Gherkin</li>
+  <li>Particiones de equivalencia</li>
+  <li>Análisis de valores límite</li>
+  <li>Jira (en aprendizaje)</li>
+  <li>Excel</li>
+  <li>Google Docs</li>
+</ul>
+
+<h2 id="proyecto">Proyecto: pruebas del registro de usuario en Instagram</h2>
+<p>Trabajo integrador del Testing Master de UTN con la Fundación EMPUJAR (2025). Verifiqué y validé el formulario de registro (Sign Up) de Instagram, buscando errores y posibles mejoras. Elegí esta funcionalidad porque es la puerta de entrada: si el registro falla, la experiencia del usuario empieza mal.</p>
+
+<h3 style="margin-top:1.6rem">Plan de prueba</h3>
+<ul class="plain">
+  <li>Campos obligatorios completos.</li>
+  <li>Formato correcto de correo y contraseña.</li>
+  <li>Mensajes de error legibles y visibles.</li>
+  <li>El sistema acepta registros válidos y rechaza los inválidos.</li>
+</ul>
+
+<div class="meta">
+  <div><span>Estrategia</span>Pruebas funcionales y exploratorias, ejecutadas manualmente</div>
+  <div><span>Alcance</span>Solo registro de usuario. Sin login, recuperación de contraseña ni funciones internas</div>
+  <div><span>Entorno</span>Google Chrome, Windows 11 de 64 bits, netbook Intel Celeron</div>
+  <div><span>Herramientas</span>Google Chrome, Excel y Google Docs</div>
+</div>
+
+<h3>Casos de prueba ejecutados</h3>
+<div class="scroll">
+<table>
+  <thead><tr><th>ID</th><th>Caso</th><th>Esperado</th><th>Obtenido</th><th>Estado</th></tr></thead>
+  <tbody>
+    <tr><td>06</td><td>Navegación por teclado: Enter para pasar de campo</td><td>Pasa al siguiente campo</td><td>Se queda en el mismo campo</td><td><span class="tag fail">Falló</span></td></tr>
+    <tr><td>07</td><td>Contraseña con solo caracteres especiales (!!!!!!)</td><td>Advertencia de seguridad</td><td>La considera válida</td><td><span class="tag fail">Falló</span></td></tr>
+    <tr><td>08</td><td>Contraseña con letras consecutivas (abcdefghi)</td><td>Advertencia de contraseña fácil de adivinar</td><td>La considera válida</td><td><span class="tag fail">Falló</span></td></tr>
+    <tr><td>09</td><td>Número de móvil ya registrado</td><td>Mensaje de error y botón deshabilitado</td><td>Habilita “Registrarte” y avanza</td><td><span class="tag fail">Falló</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3 style="margin-top:1.6rem">Reportes</h3>
+<div class="scroll">
+<table>
+  <thead><tr><th>ID</th><th>Título</th><th>Severidad</th><th>Prioridad</th><th>Fecha</th></tr></thead>
+  <tbody>
+    <tr><td>09</td><td>Validación al ingresar número de teléfono ya registrado</td><td>Baja</td><td>Media</td><td>28/07/25</td></tr>
+    <tr><td>08</td><td>Comprobar ingreso de letras consecutivas en contraseña</td><td>Baja</td><td>Alta</td><td>30/07/25</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Cada reporte incluye título, descripción, plataforma y versión del navegador, pasos para reproducir, resultado esperado, resultado obtenido y capturas de pantalla como evidencia. También redacté un comentario de mejora: el mensaje “Es demasiado fácil de adivinar” debería aparecer aunque la contraseña cumpla el mínimo de caracteres.</p>
+
+<h3 style="margin-top:1.6rem">Lo que me llevo</h3>
+<p>Apliqué pruebas manuales, reconocí la importancia de las validaciones de seguridad y practiqué el reporte de errores y mejoras sobre un producto real.</p>
+<p>¿Querés ver el trabajo completo con las capturas? <a href="#contacto">Escribime</a> y te lo envío.</p>
+
+<h2 id="proyecto-talento-tech">Proyecto: estrategia de pruebas del registro de postulantes</h2>
+<p>Pre-entrega 1 de Talento Tech (07/10/2026). Trabajé sobre una página de práctica que brinda el curso: el módulo de registro de un portal de empleo. Antes de ejecutar pruebas, analicé los requerimientos, definí el alcance y diseñé los casos con técnicas de caja negra.</p>
+
+<h3 style="margin-top:1.6rem">Refinamiento de requerimientos</h3>
+<p>Entrevisté a la Product Owner para resolver tres dudas del requerimiento. Sus respuestas me permitieron escribir criterios de aceptación concretos.</p>
+<div class="scroll">
+<table>
+  <thead><tr><th>Duda detectada</th><th>Respuesta de la Product Owner</th></tr></thead>
+  <tbody>
+    <tr><td>¿Qué pasa si el formato del CV no es válido?</td><td>Se muestra un mensaje de error específico</td></tr>
+    <tr><td>¿A qué se refiere el “estado” de la clave en la validación visual?</td><td>El borde del campo cambia y las ayudas se muestran u ocultan en tiempo real mientras se escribe</td></tr>
+    <tr><td>¿Cuáles son los estándares mínimos de la contraseña?</td><td>Entre 8 y 16 caracteres, con al menos una mayúscula, una minúscula y un número</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3 style="margin-top:1.6rem">Historia de usuario y criterios de aceptación</h3>
+<p>Refiné la historia TL-01 con formato INVEST: como nuevo usuario en búsqueda de un puesto laboral, quiero registrarme en el portal ingresando mis datos personales, para tener mi cuenta lista cuando quiera buscar puestos. La acompañé con cinco criterios de aceptación en formato Gherkin (Dado, Cuando, Entonces):</p>
+<ul class="plain">
+  <li>Registro exitoso con datos válidos y CV adjunto, con redirección al inicio de sesión.</li>
+  <li>Contraseña de 6 caracteres: el indicador pasa a rojo, el sistema no avanza y muestra el formato correcto.</li>
+  <li>CV en .jpg: se bloquea la carga y se indica que debe ser .pdf o .docx.</li>
+  <li>CV vacío: el sistema no avanza y pide seleccionar un archivo.</li>
+  <li>Correo ya registrado: no se completa el registro y se advierte al usuario.</li>
+</ul>
+
+<h3 style="margin-top:1.6rem">Alcance y entorno</h3>
+<div class="meta">
+  <div><span>En alcance</span>Pruebas funcionales del registro, datos válidos e inválidos en nombre, email, contraseña y CV, y que no haya correos duplicados</div>
+  <div><span>Fuera de alcance</span>Que el correo pertenezca a una persona real, pruebas de caja blanca y el contenido del archivo CV</div>
+  <div><span>Entorno</span>Netbook Intel Celeron, Windows 11 Pro Education y Google Chrome</div>
+</div>
+
+<h3>Técnicas de caja negra y casos de prueba</h3>
+<ul class="plain">
+  <li><b>Particiones de equivalencia</b> para la carga de CV: .pdf (válida), .jpg (inválida) y un archivo de 73,1 KB (válida).</li>
+  <li><b>Valores límite</b> para la contraseña: 7 caracteres (inválida), 8 y 16 (válidas) y 17 (inválida).</li>
+  <li><b>Casos de prueba</b>: TC-01 registro exitoso (ruta feliz), TC-02 contraseña menor al mínimo y TC-03 carga de un archivo .jpg (rutas alternativas).</li>
+</ul>
+<p class="note">Trabajo en curso dentro del curso Talento Tech.</p>
+
+<h2 id="formacion">Formación</h2>
+<ul class="plain">
+  <li><b>Tecnicatura en Análisis de Sistemas</b> (terciario). Me faltan tres materias. Egreso previsto: diciembre de 2026.</li>
+  <li><b>Talento Tech · Testing QA</b>. En curso. Estoy aprendiendo Jira.</li>
+  <li><b>Testing Master · UTN</b>, con la Fundación EMPUJAR. Finalizado en agosto de 2025.</li>
+</ul>
+
+<h2 id="contacto">Contacto</h2>
+<ul class="plain">
+  <li>Correo: <a href="mailto:quirogabana@gmail.com">quirogabana@gmail.com</a></li>
+  <li>LinkedIn: <a href="https://linkedin.com/in/anabelenquiroga">linkedin.com/in/anabelenquiroga</a></li>
+  <li>Ubicación: Lomas de Zamora, Buenos Aires, Argentina</li>
+</ul>
+<footer>Portfolio en construcción: voy sumando proyectos a medida que avanzo en el curso.</footer>
+</main>
+</body>
+</html>
